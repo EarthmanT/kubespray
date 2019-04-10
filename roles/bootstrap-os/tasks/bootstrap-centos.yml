@@ -88,3 +88,8 @@
   when:
     - not is_atomic
     - package_python_pip.results | length != 0
+
+- name: Installing packages for certificates
+  package:
+    name: openssl
+    state: present
