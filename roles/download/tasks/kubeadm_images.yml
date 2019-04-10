@@ -6,7 +6,7 @@
 
 - name: Make sure that the local release dir existings ... not sure what happened.
   file:
-    path: {{ local_release_dir }}
+    path: "{{ local_release_dir }}"
     state: directory
     mode: 0755
 
