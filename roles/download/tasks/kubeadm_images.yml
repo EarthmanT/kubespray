@@ -1,4 +1,10 @@
 ---
+- name: Make sure that the local release dir existings ... not sure what happened.
+  file:
+    path: "{{ kube_config_dir }}"
+    state: directory
+    mode: 0755
+
 - name: kubeadm | Create kubeadm config
   template:
     src: "kubeadm-images.yaml.j2"
